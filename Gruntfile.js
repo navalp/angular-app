@@ -5,15 +5,23 @@
         var vendorFiles,
             cssFiles,
             appFiles;
-        vendorFiles = ['vendor/jquery/dist/jquery.min.js', 'vendor/bootstrap/dist/js/bootstrap.min.js', 'vendor/angular/angular.min.js',
+        vendorFiles = ['vendor/jquery/dist/jquery.min.js',
+            'vendor/bootstrap/dist/js/bootstrap.min.js',
+            'vendor/angular/angular.min.js',
             'vendor/angular-ui-router/release/angular-ui-router.min.js',
             'vendor/metisMenu/dist/metisMenu.min.js'
         ];
 
         appFiles = [
-            'app/components/auth/AuthModule.js', 'app/components/auth/AuthRoute.js', 'app/components/auth/controllers/LoginController.js',
-            'app/components/common/commonModule.js', 'app/components/dashboard/DashboardModule.js', 'app/components/dashboard/DashboardRoute.js',
-            'app/components/dashboard/controllers/DashboardController.js', 'app.js', 'config.js','assets/js/main.js'
+            'app/components/auth/AuthModule.js',
+            'app/components/auth/AuthRoute.js',
+            'app/components/auth/controllers/LoginController.js',
+            'app/components/auth/services/Session.js',
+            'app/components/auth/services/AuthService.js',
+            'app/components/common/commonModule.js',
+            'app/components/dashboard/DashboardModule.js',
+            'app/components/dashboard/DashboardRoute.js',
+            'app/components/dashboard/controllers/DashboardController.js', 'app.js', 'config.js', 'assets/js/main.js'
         ];
         cssFiles = [
             'vendor/bootstrap/dist/css/bootstrap.min.css', 'assets/css/main.css', 'assets/css/timeline.css', 'vendor/metisMenu/dist/metisMenu.min.css'
@@ -44,7 +52,7 @@
             },
             watch: {
                 scripts: {
-                    files: vendorFiles.concat(appFiles,['Gruntfile.js']),
+                    files: vendorFiles.concat(appFiles, ['Gruntfile.js']),
                     tasks: ['concat', 'uglify']
                 }
             }

@@ -12,6 +12,10 @@
                 '@': {
                     templateUrl: 'app/components/dashboard/views/dashboard.html'
                 }
+            },
+            data:{
+                is_authorize:true,
+                role:['user']
             }
 
 
