@@ -1,5 +1,5 @@
 (function () {
     'use strict';
-    angular.module('AugularApp.common', ['ui.router']);
+    angular.module('AngularApp.Common', ['ui.router']);
 })();
 

@@ -16,15 +16,25 @@
             'app/components/auth/AuthModule.js',
             'app/components/auth/AuthRoute.js',
             'app/components/auth/controllers/LoginController.js',
-            'app/components/auth/services/Session.js',
-            'app/components/auth/services/AuthService.js',
-            'app/components/common/commonModule.js',
+            //'app/components/auth/services/Session.js',
+           // 'app/components/auth/services/AuthService.js',
+            'app/components/common/CommonModule.js',
+            'app/components/common/controllers/MenuController.js',
             'app/components/dashboard/DashboardModule.js',
             'app/components/dashboard/DashboardRoute.js',
-            'app/components/dashboard/controllers/DashboardController.js', 'app.js', 'config.js', 'assets/js/main.js'
+            'app/components/dashboard/controllers/DashboardController.js',
+            'app/components/profile/ProfileModule.js',
+            'app/components/profile/ProfileRoute.js',
+            'app/components/profile/controllers/ProfileController.js',
+            'app.js',
+            'config.js',
+            'assets/js/main.js'
         ];
         cssFiles = [
-            'vendor/bootstrap/dist/css/bootstrap.min.css', 'assets/css/main.css', 'assets/css/timeline.css', 'vendor/metisMenu/dist/metisMenu.min.css'
+            'vendor/bootstrap/dist/css/bootstrap.min.css',
+            'assets/css/main.css',
+            'assets/css/timeline.css',
+            'vendor/metisMenu/dist/metisMenu.min.css'
         ];
         grunt.initConfig({
             pkg: grunt.file.readJSON('package.json'),
@@ -45,8 +55,8 @@
             uglify: {
                 app: {
                     files: {
-                        'dist/js/vendor.min.js': vendorFiles,
-                        'dist/js/app.min.js': appFiles
+                        'dist/js/vendor.min.js': 'dist/js/vendor.js',
+                        'dist/js/app.min.js': 'dist/js/app.js'
                     }
                 }
             },
@@ -63,7 +73,7 @@
         grunt.loadNpmTasks('grunt-contrib-concat');
         grunt.loadNpmTasks('grunt-contrib-cssmin');
         grunt.loadNpmTasks('grunt-contrib-watch');
-        grunt.registerTask('default', ['watch']);
+        grunt.registerTask('default', ['concat','uglify']);
     }
 
 })();

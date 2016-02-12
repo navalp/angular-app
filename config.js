@@ -15,7 +15,8 @@
 
                 },
                 'navigation@main': {
-                    templateUrl: 'app/components/common/views/leftNavigation.html'
+                    templateUrl: 'app/components/common/views/leftNavigation.html',
+                    controller: 'MenuController'
                 }
             }
         });
