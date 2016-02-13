@@ -23,9 +23,10 @@
             'app/components/dashboard/DashboardModule.js',
             'app/components/dashboard/DashboardRoute.js',
             'app/components/dashboard/controllers/DashboardController.js',
-            'app/components/profile/ProfileModule.js',
-            'app/components/profile/ProfileRoute.js',
-            'app/components/profile/controllers/ProfileController.js',
+            'app/components/account/AccountModule.js',
+            'app/components/account/AccountRoute.js',
+            'app/components/account/controllers/ProfileController.js',
+            'app/components/account/controllers/UserController.js',
             'app.js',
             'config.js',
             'assets/js/main.js'
