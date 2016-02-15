@@ -30,7 +30,7 @@
                         $state.go('login');
                     } else if (!AuthService.isAuthorized(toState.data.roles)) {
                         event.preventDefault();
-                        $state.go('unauthorize');
+                        $state.go('main.unauthorize');
                     }
                 }
             }

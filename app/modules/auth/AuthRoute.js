@@ -9,9 +9,14 @@
             url: '/login',
             controller: 'LoginController',
             templateUrl: 'app/modules/auth/views/login.html'
-        }).state('unauthorize', {
+        }).state('main.unauthorize', {
             url: '/unauthorize',
-            templateUrl: 'app/modules/auth/views/unauthorize.html'
+            views: {
+                '@': {
+                    templateUrl: 'app/modules/auth/views/unauthorize.html'
+                }
+            }
+
         });
     }]);
 })();
