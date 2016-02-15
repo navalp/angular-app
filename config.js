@@ -11,17 +11,32 @@
             url: '',
             views: {
                 header: {
-                    templateUrl: 'app/components/common/views/header.html'
+                    templateUrl: 'app/modules/common/views/header.html'
 
                 },
                 'navigation@main': {
-                    templateUrl: 'app/components/common/views/leftNavigation.html',
+                    templateUrl: 'app/modules/common/views/leftNavigation.html',
                     controller: 'MenuController'
                 }
             }
         });
-
-
     }
+
+    angular.module('AngularApp').run(function ($rootScope, AuthService, $state) {
+        $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+                if (toState.data && toState.data.isAuthRequired) {
+                    if (!AuthService.isAuthenticated()) {
+                        event.preventDefault();
+                        $state.go('login');
+                    } else if (!AuthService.isAuthorized(toState.data.roles)) {
+                        event.preventDefault();
+                        $state.go('unauthorize');
+                    }
+                }
+            }
+        );
+
+    });
+
 })();
 
