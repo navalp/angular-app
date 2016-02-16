@@ -20,6 +20,7 @@
             'app/modules/auth/services/AuthService.js',
             'app/modules/common/CommonModule.js',
             'app/modules/common/controllers/MenuController.js',
+            'app/modules/common/controllers/HeaderController.js',
             'app/modules/dashboard/DashboardModule.js',
             'app/modules/dashboard/DashboardRoute.js',
             'app/modules/dashboard/controllers/DashboardController.js',

@@ -15,6 +15,10 @@
                 '@': {
                     templateUrl: 'app/modules/auth/views/unauthorize.html'
                 }
+            },
+            data:{
+                isAuthRequired:true,
+                roles:['admin','user']
             }
 
         });

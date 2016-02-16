@@ -11,8 +11,8 @@
             url: '',
             views: {
                 header: {
-                    templateUrl: 'app/modules/common/views/header.html'
-
+                    templateUrl: 'app/modules/common/views/header.html',
+                    controller: 'HeaderController'
                 },
                 'navigation@main': {
                     templateUrl: 'app/modules/common/views/leftNavigation.html',

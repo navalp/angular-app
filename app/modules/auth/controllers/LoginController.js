@@ -6,7 +6,7 @@
 
     angular.module('AngularApp.Auth').controller('LoginController', ['$scope', '$state', 'AuthService', function ($scope, $state, AuthService) {
         $scope.login = function login() {
-            var user = {'email': 'test@gmail.com', access_token: '12345678', role: 'admin'};
+            var user = {'email': 'test@gmail.com', access_token: '12345678', role: 'user'};
             AuthService.login(user);
             $state.go('main.dashboard');
         }
