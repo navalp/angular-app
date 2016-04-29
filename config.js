@@ -22,8 +22,8 @@
         });
     }
 
-    angular.module('AngularApp').run(['$rootScope', 'AuthService', '$state',function ($rootScope, AuthService, $state) {
-        $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+    angular.module('AngularApp').run(['$rootScope', 'AuthService', '$state', function ($rootScope, AuthService, $state) {
+            $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
                 if (toState.data && toState.data.isAuthRequired) {
                     if (!AuthService.isAuthenticated()) {
                         event.preventDefault();
@@ -34,9 +34,9 @@
                     }
                 }
             }
-        );
+            );
 
-    }]);
+        }]);
 
 })();
 

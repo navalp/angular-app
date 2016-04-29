@@ -11,7 +11,10 @@
                 '@': {
                     templateUrl: 'app/modules/account/views/profile.html',
                     controller: 'ProfileController'
-                }
+                },
+                'slider@': {
+                      template: 'slider',              
+                },
             },
             data:{
                 isAuthRequired:true,
